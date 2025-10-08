@@ -31,6 +31,16 @@ def funcion2(n:int, k:int)-> int:
     return baseproducto
 
 
+#funcion3. producto serie geometrica an = a1 * r ^(n-1). devolver producto de los k primeros terminos.
+#.
+#.
+def funcion3(a1: int, r: int, k:int) -> int:
+    assert k>0, "k no puede ser 0"
+    
+    baseproducto2: int = 1
+    for i in range (1, k+1):
+        baseproducto2 *= a1 * r **(i-1)
+    return baseproducto2
 
 
 
