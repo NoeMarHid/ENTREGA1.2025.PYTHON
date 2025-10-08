@@ -1,5 +1,6 @@
 import datetime
 import locale
+from math import factorial
 
 locale.setlocale(locale.LC_ALL, 'es_ES.UTF-8')
 
@@ -41,6 +42,31 @@ def funcion3(a1: int, r: int, k:int) -> int:
     for i in range (1, k+1):
         baseproducto2 *= a1 * r **(i-1)
     return baseproducto2
+
+#funcion4. dos enteros n y k con n>=k calcular el combinatorio n sobre k
+#.
+#.
+def funcion4(n: int, k:int)-> float:
+    assert n>=k, " n tieene que ser mayor o igual que k"
+    nFactorial: int = math.factorial(n)
+    kFactorial: int = math.factorial(k)
+    nMenoskFactorial: int = math.factorial(n-k)
+    combinatorio: float = nFactorial / (kFactorial * nMenoskFactorial)
+    return combinatorio
+#combinatorio es n!/(k!*(n-k)!)
+
+
+#funcion5. enteros n y k con n>=k calcular la suma S(n,k) de la serie de la imagen
+#.
+#.
+def funcion5(n:int, k:int)-> float:
+    assert n>=k, 'n tiene que ser >=k)'
+    baseSuma: float= 0.0
+    for i in range (0, k+1):
+        beseSuma += (-1)**i* funcion4(k+1,i+1)*(k-i)**n 
+    return 1/math.factorial(k) * baseSuma
+
+
 
 
 
