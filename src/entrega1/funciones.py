@@ -1,6 +1,7 @@
 import datetime
 import locale
 from math import factorial
+import math
 
 locale.setlocale(locale.LC_ALL, 'es_ES.UTF-8')
 
@@ -64,9 +65,9 @@ def funcion4(n: int, k:int)-> float:
 #.
 def funcion5(n:int, k:int)-> float:
     assert n>=k, 'n tiene que ser >=k)'
-    baseSuma: float= 0.0
+    baseSuma: float= 0
     for i in range (0, k+1):
-        beseSuma += (-1)**i* funcion4(k+1,i+1)*(k-i)**n 
+        baseSuma += (-1)**i* funcion4(k+1,i+1)*(k-i)**n 
     return 1/math.factorial(k) * baseSuma
 
 
@@ -75,4 +76,4 @@ def funcion5(n:int, k:int)-> float:
 
 if __name__ == '__main__':
     
-    pass
+    print(funcion3(2,2,3))  # Output: 64
