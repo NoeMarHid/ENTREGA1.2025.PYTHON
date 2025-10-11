@@ -9,7 +9,10 @@ locale.setlocale(locale.LC_ALL, 'es_ES.UTF-8')
 #.
 #.
 def funcion1(dia: int, mes:int, anyo:int) -> bool:
-    fecha: datetime.date = datetime.date(day=dia, month=mes, year=anyo)
+    try:
+        fecha: datetime.date = datetime.date(day=dia, month=mes, year=anyo)
+    except ValueError:
+        return False
     
     #.weekday() devuelve 0 para lunes y 6 para domingo
     
@@ -67,8 +70,9 @@ def funcion5(n:int, k:int)-> float:
     return 1/math.factorial(k) * baseSuma
 
 
-#hhhh
+
 
 
 if __name__ == '__main__':
+    
     pass
