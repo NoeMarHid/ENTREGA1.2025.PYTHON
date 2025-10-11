@@ -19,7 +19,7 @@ def funcion1(dia: int, mes:int, anyo:int) -> bool:
         return False
     else:
         return True
-    
+      
 
 #fucion2. dos enetros n, k. con n>k. calcula el producto de i=0 a k de ∏ (𝑛 − 𝑖 + 1)
 #.
