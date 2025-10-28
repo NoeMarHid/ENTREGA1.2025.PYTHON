@@ -51,7 +51,7 @@ class Almacen:
     #creacion de un almacen con .of
     #----------------------------
     
-    @staticmethod
+    @staticmethod 
     
     def of(codigo: int, nombre: str, ciudad: str, coordenadas: Coordenadas2D) -> 'Almacen':
         """
